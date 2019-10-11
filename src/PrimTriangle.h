@@ -53,14 +53,18 @@ public:
 		if (ray.t <= f || f <  Epsilon  ) return false;
 		
 		ray.t = f;
-		
+        Ray R1;
+        R1 = this;
+        ray.hit = R1;
 		return true;
 	}
 
 	virtual Vec3f GetNormal(const Ray& ray) const override
 	{
+        Vec3f reval = normalize((m_b - m_a).cross(m_c - m_a));
+        return reval;
 		// --- PUT YOUR CODE HERE ---
-		return Vec3f();
+    
 	}
 	
 private:

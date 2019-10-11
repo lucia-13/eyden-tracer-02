@@ -50,13 +50,16 @@ public:
 		}
 		
 		ray.t = dist;
+        Ray R1;
+              R1 = this;
+              ray.hit = R1;// making vector 1 hit vecto pf ray
 		return true;
 	}
 	
 	virtual Vec3f GetNormal(const Ray& ray) const override
 	{
-		// --- PUT YOUR CODE HERE ---
-		return Vec3f();
+        Vec3f reval  =  normalize((ray.org + ray.dir * ray.t) - m_center);
+	   return  reval;
 	}
 	
 private:

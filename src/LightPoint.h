@@ -19,11 +19,21 @@ public:
 	{} 
 	virtual ~CLightPoint(void) = default;
 
-	virtual std::optional<Vec3f> Illuminate(Ray& ray) override
-	{
-		// --- PUT YOUR CODE HERE ---
-		return Vec3f();
-	}
+    virtual std::optional<Vec3f> Illuminate(Ray& ray) override{
+  
+        Vec3f vec1;
+        
+        for (int j = 0; j < 3; j++)
+        {
+            float idr;
+            
+             idr = (((ray.org[j] + ray.t) * ray.dir[j]) - m_position[i]);
+            
+            vec1[j] = m_intensity[j] / (idr * idr);
+        }
+        return Vec3f;
+              // --- PUT YOUR CODE HERE ---
+    }
 
 
 private:

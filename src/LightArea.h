@@ -1,3 +1,5 @@
+//lucia fuentes, fall 2019, hw2
+
 #pragma once
 
 #include "ILight.h"
@@ -26,6 +28,13 @@ public:
 		, m_e2(p3 - p0)
 	{ 
 		// --- PUT YOUR CODE HERE ---
+        m_normal = 0; //variable to save cross product e1 e2
+        m_normal = m_e1.cross(m_e2); //cross product m_e1 with m_e2
+        
+        m_area = 0; // variable to save normalization cross product
+        m_area = norm(m_normal); //normalization of cross product
+        
+        m_normal = normalize(m_normal); //changing m_normal to normalization of itself
 	}  
 
 	virtual std::optional<Vec3f> Illuminate(Ray& ray) override
