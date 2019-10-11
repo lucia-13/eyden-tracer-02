@@ -1,3 +1,5 @@
+//lucia fuentes, hw 2, fall 2019
+
 #pragma once
 
 #include "ILight.h"
@@ -27,11 +29,11 @@ public:
         {
             float idr;
             
-             idr = (((ray.org[j] + ray.t) * ray.dir[j]) - m_position[i]);
+             idr = (((ray.org[j] + ray.t) * ray.dir[j]) - m_position[j]);
             
             vec1[j] = m_intensity[j] / (idr * idr);
         }
-        return Vec3f;
+       
               // --- PUT YOUR CODE HERE ---
     }
 

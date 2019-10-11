@@ -1,3 +1,5 @@
+//lucia fuentes, hw 2, fall 2019
+
 // Triangle Geaometrical Primitive class
 // Written by Sergey Kosov in 2005 for Rendering Competition
 #pragma once
@@ -53,9 +55,9 @@ public:
 		if (ray.t <= f || f <  Epsilon  ) return false;
 		
 		ray.t = f;
-        Ray R1;
-        R1 = this;
-        ray.hit = R1;
+       Ray R1;
+      R1.hit = this;
+     ray.hit = R1;
 		return true;
 	}
 

@@ -1,3 +1,5 @@
+//lucia fuentes, hw 2, fall 2019
+
 // Plane Geaometrical Primitive class
 // Written by Sergey Kosov in 2005 for Rendering Competition
 #pragma once
@@ -28,9 +30,9 @@ public:
 	{
 		float t = (m_origin - ray.org).dot(m_normal) / ray.dir.dot(m_normal);
 		if (t < Epsilon || t > ray.t) return false;
-           Ray R1;
-          R1 = this;
-          ray.hit = R1;
+          Ray R1;
+        R1.hit = this;
+         ray.hit = R1;
 		ray.t = t;
 		return true;
 	}

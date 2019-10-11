@@ -1,5 +1,7 @@
 // Camera Abstract Interface class
 // Written by Sergey Kosov in 2005 for Rendering Competition
+//lucia fuentes, hw 2, fall 2019
+
 #pragma once
 
 #include "ray.h"

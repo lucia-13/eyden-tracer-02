@@ -1,3 +1,4 @@
+//lucia fuentes, hw 2, fall 2019
 #pragma once
 
 #include "ILight.h"

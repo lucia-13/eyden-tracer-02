@@ -1,6 +1,6 @@
 // Perspective Camera class
 // Written by Sergey Kosov in 2005 for Rendering Competition
-//lucia fuentes hdnhhd
+//lucia fuentes, hw 2, fall 2019
 #pragma once
 
 #include "ICamera.h"

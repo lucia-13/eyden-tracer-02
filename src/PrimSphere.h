@@ -1,3 +1,5 @@
+//lucia fuentes, hw 2, fall 2019
+
 // Sphere Geaometrical Primitive class
 // Written by Sergey Kosov in 2005 for Rendering Competition
 #pragma once
@@ -51,8 +53,8 @@ public:
 		
 		ray.t = dist;
         Ray R1;
-              R1 = this;
-              ray.hit = R1;// making vector 1 hit vecto pf ray
+        R1.hit = this;
+      ray.hit = R1;// making vector 1 hit vecto pf ray
 		return true;
 	}
 	
